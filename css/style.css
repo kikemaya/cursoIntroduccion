@@ -10,49 +10,15 @@ html {
 body {
     color: #000A2D;
 }
-header {
-    transition: 0.2s linear;
-}
-header.dark, header.dark a {
-    background-color: #000A2D;
-    color: #C5C5DD!important;
-}
-header.dark a:hover {
-    color:yellow;
-}
-h2 {
-    text-transform: uppercase;
-}
-header {
-    font-family: 'Work Sans', sans-serif;
-    font-weight: 500;
-    position: sticky;top: 0;
-}
 .container {
     background-color: #fff;
     display: flex;
     align-items: center;
     padding: 0 3rem;
 }
-.container-header {
-    padding-top: 20px;
-    padding-bottom: 20px;
-    background-color: #fff;
-    justify-content: space-between;
-    -webkit-box-shadow: 0px 2px 15px -5px 	rgba(128,128,128, 0.4); 
-    box-shadow: 0px 2px 15px -5px 	rgba(128,128,128, 0.4);
-}
-.container-main-info {
-    padding-top: 40px;
-    padding-bottom: 40px;
-}
-.container-footer {
-    padding-top: 20px;
-    padding-bottom: 20px;
-    background-color: #000A2D;
-    color: #fff;
-    justify-content: center;
-    flex-direction: column;
+h2 {
+    text-transform: uppercase;
+    font-size: 1.8rem;
 }
 ul {
     list-style: none;
@@ -72,52 +38,51 @@ ul li a {
 }
 ul li a:hover {
     color: #464D65;
-
 }
+.d-flex-column {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+/*HEADER STYLES*/
+header {
+    transition: 0.2s linear;
+}
+header.dark, header.dark a {
+    background-color: #000A2D;
+    color: #C5C5DD!important;
+}
+header.dark a:hover {
+    color:yellow;
+}
+header {
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 500;
+    position: sticky;
+    top: 0;
+}
+.container-header {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: #fff;
+    justify-content: space-between;
+    -webkit-box-shadow: 0px 2px 15px -5px 	rgba(128,128,128, 0.4); 
+    box-shadow: 0px 2px 15px -5px 	rgba(128,128,128, 0.4);
+}
+/*NAVBAR*/
 .logoNavBar {
     font-size: 1.3rem;
 }
-.logoFooter {
-    font-size: 1.5rem;
-}
-.mid-text-footer {
-    margin: 1.8rem auto;
-}
-.mid-text-footer p {
-    color: #C5C5DD;
-    text-align: center;
-}
-.social-icons a{
-    font-size: 1.5rem;
+.logoNavBar a{
     text-decoration: none;
-    color: #393A50;
+    color: #000A2D;
+    background-color: transparent!important;
+    transition: 0.2s linear;
 }
-.social-icons a:nth-child(2n) {
-    margin: auto 25px;
+.logoNavBar a:hover{
+    color: #464D65;
 }
-.social-icons a:hover {
-    color: #C5C5DD;
-}
-.gotopbtn {
-    position: fixed;
-    width: 50px;
-    height: 50px;
-    background: #EC5B53;
-    color: #FFF4F4;
-    bottom: 40px;
-    right: 50px;
-    border-radius: 3px;
-    text-align: center;
-    text-decoration: none;
-    line-height: 50px;
-    font-size: 22px;
-}
-.gotopbtn:hover{
-    border: 1px solid #EC5B53;
-    background-color: transparent;
-    color: #EC5B53;
-    transition: 0.5s;
-}
+/*DARK MODE BUTTON*/
 .checkbox, .label, .ball {
     cursor: pointer;
 }
@@ -126,10 +91,6 @@ ul li a:hover {
     opacity: 0;
     position: absolute;
 }
-/* .checkbox:checked + .label .ball {
-    transform: translateX(24px);
-    transition: 0.5s;
-} */
 .label {
     background-color: #C5C5DD;
     border: 0.5px solid #000A2D;
@@ -157,16 +118,10 @@ ul li a:hover {
 .checkbox:checked + .label .ball {
     transform: translateX(14px);
 }
-.fa-moon {
-    color: #f1c40f;
-}
-.fa-lightbulb {
-    color: #f39c12;
-}
-.d--flex {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+/*SERVICES*/
+.container-main-info {
+    padding-top: 40px;
+    padding-bottom: 40px;
 }
 .card {
     border: 1px solid #EC5B53;
@@ -208,3 +163,59 @@ ul li a:hover {
 .container-services div:nth-child(2n) {
     margin: auto 40px;
 }
+/* FOOTER */
+.container-footer {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: #000A2D;
+    color: #fff;
+    justify-content: center;
+    flex-direction: column;
+}
+.logoFooter {
+    font-size: 1.5rem;
+}
+.mid-text-footer {
+    margin: 1.8rem auto;
+}
+.mid-text-footer p {
+    color: #C5C5DD;
+    text-align: center;
+}
+.social-icons a{
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: #393A50;
+}
+.social-icons a:nth-child(2n) {
+    margin: auto 25px;
+}
+.social-icons a:hover {
+    color: #C5C5DD;
+}
+/*GO TO UP BUTTON*/
+.gotopbtn {
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    background: #EC5B53;
+    color: #FFF4F4;
+    bottom: 40px;
+    right: 50px;
+    border-radius: 3px;
+    text-align: center;
+    text-decoration: none;
+    line-height: 50px;
+    font-size: 22px;
+}
+.gotopbtn:hover{
+    border: 1px solid #EC5B53;
+    background-color: transparent;
+    color: #EC5B53;
+    transition: 0.5s;
+}
+@media only screen and (max-width: 550px) {
+    .container-services div:nth-child(2n) {
+        margin: auto 0px;
+    } 
+  }
