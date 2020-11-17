@@ -118,6 +118,53 @@ header {
 .checkbox:checked + .label .ball {
     transform: translateX(14px);
 }
+
+/*HERO*/
+div.hero{
+    background-image: url("https://images.unsplash.com/photo-1598978483528-fd57466ab0ad?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=751&q=80");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://images.unsplash.com/photo-1598978483528-fd57466ab0ad?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=751&q=80");
+
+  /* Set a specific height */
+ height: 500px;
+
+  /* Position and center the image to scale nicely on all screens */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  z-index: -1;
+
+}
+div.container-hero{
+    padding: 4rem;
+    color: #fff;
+    width: 50%;
+}
+
+div.container-hero *{
+    margin: 1rem;
+    font-family: Work Sans;
+    font-style: normal;
+}
+.bigger{
+    font-family: Fira Sans;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 46px;
+    line-height: 55px;
+}
+.buttonWhite{
+    font-family: Work Sans;
+    background: none !important;
+    border: none;
+    border-radius: 10px;
+    padding: .8rem;
+    color: #fff;
+    border: 1px solid #fff;
+}
+
+
+
 /*SERVICES*/
 .container-main-info {
     padding-top: 40px;
@@ -193,6 +240,54 @@ header {
 .social-icons a:hover {
     color: #C5C5DD;
 }
+
+
+/*Contact*/
+.container-contact{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+.container-form{
+    background-color: #FFF4F4;
+    border: 1px solid #EC5B53;
+    border-radius: 12px;
+    padding: 2rem;
+}
+.inputContact{
+    padding: 1rem .5rem .5rem .5rem;
+    margin-bottom: 1.5rem;
+    background: #FFFFFF;
+    border: 1px solid #EC5B53;
+    box-sizing: border-box;
+    border-radius: 7px;
+    width: 100%;
+}
+.buttonContact{
+    font-family: Work Sans;
+    background: #EC5B53;
+    border: none;
+    border-radius: 10px;
+    padding: .8rem;
+    color: #fff;
+}
+.container-contact-data{  
+    padding: 2rem;
+}
+.cont-center{
+    width: 80%;
+    margin: 0 auto;
+}
+.ContactOption{
+    display: flex;   
+    margin: 2rem 1rem ;
+}
+.ContactOption i{
+    margin: 0 1.5rem;
+}
+
+
 /*GO TO UP BUTTON*/
 .gotopbtn {
     position: fixed;
@@ -214,8 +309,15 @@ header {
     color: #EC5B53;
     transition: 0.5s;
 }
+
 @media only screen and (max-width: 550px) {
     .container-services div:nth-child(2n) {
         margin: auto 0px;
     } 
+  
+  }
+  @media only screen and (max-width:1024px){
+    .div.container-hero{
+        width: 100% !important;
+    }
   }
